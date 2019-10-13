@@ -6,6 +6,7 @@ RUN apt-get update && \
 # Create app directory and copy the Elixir projects into it
 RUN mkdir /app
 COPY ./app /app
+COPY ./entrypoint.sh /app
 WORKDIR /app
 
 # Install hex package manager
